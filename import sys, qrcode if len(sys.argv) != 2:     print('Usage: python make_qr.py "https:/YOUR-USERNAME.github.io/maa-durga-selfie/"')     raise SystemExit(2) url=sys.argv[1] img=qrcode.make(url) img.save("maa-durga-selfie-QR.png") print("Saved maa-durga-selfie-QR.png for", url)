@@ -1,0 +1,8 @@
+import sys, qrcode
+if len(sys.argv) != 2:
+    print('Usage: python make_qr.py "https://YOUR-USERNAME.github.io/maa-durga-selfie/"')
+    raise SystemExit(2)
+url=sys.argv[1]
+img=qrcode.make(url)
+img.save("maa-durga-selfie-QR.png")
+print("Saved maa-durga-selfie-QR.png for", url)
